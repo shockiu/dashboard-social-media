@@ -1,2 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+//Abstract
+@import './abstract/mixins';
+@import './abstract/variables';
+
 // Base
 @import './base/body';
+@import './base/reset';
+
+//Pages
+@import './pages/dashboard';
