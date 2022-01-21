@@ -1,0 +1,9 @@
+.social-media {
+    margin-top: 6%;
+}
+
+.main-social-media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-bottom: 6%;
+}
