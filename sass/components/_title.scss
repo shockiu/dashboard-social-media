@@ -1,0 +1,18 @@
+.title-dash {
+    font-size: calc(14px * 2);
+    color: var(--text-color-sencondary);
+    margin-bottom: 6px;
+}
+
+.stats-dash {
+    font-size: $font-size;
+    color: var(--text-color-primary);
+}
+
+.overview-title {
+    font-family: $font-family;
+    font-size: calc(12px *2);
+    font-weight: $font-weights-700;
+    color: var(--text-color-primary);
+    margin-bottom: 16px;
+}

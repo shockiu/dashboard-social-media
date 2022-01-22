@@ -1,0 +1,36 @@
+.overview-stats__box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 140px;
+    font-family: $font-family;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    margin: 6px 14px;
+    position: relative;
+}
+
+.overview-stats__resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.overview-stats__subject {
+    font-size: $font-size;
+    font-weight: $font-weights-700;
+    color: var(--text-color-primary);
+}
+
+.overview-stats__today {
+    font-size: calc(14px * 2);
+    font-weight: $font-weights-700;
+    color: var(--text-color-sencondary);
+}
+
+.overview-percent__today {
+    font-size: 12px;
+    font-weight: $font-weights-700;
+    color: var(--text-color-primary);
+    margin-top: 14px;
+}

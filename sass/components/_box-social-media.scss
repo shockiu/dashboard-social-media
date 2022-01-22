@@ -6,14 +6,16 @@
     height: 200px;
     font-family: $font-family;
     background-color: var(--card-background);
-    margin: 0 14px;
     border-radius: 8px;
+    margin: 0 14px;
+    position: relative;
 }
 
 .main-social-media__user {
     font-weight: $font-weights-400;
     font-size: $font-size;
     color: var(--text-color-primary);
+    margin-left: 8px;
 }
 
 .main-social-media__stats {
@@ -33,12 +35,19 @@
     font-size: 12px;
 }
 
-/*
-    Mejor hacerlo con un after
-*/
+.user-icon-social {
+    display: flex;
+}
 
 @each $child, $color-bg in $social-media-colors {
-    .main-social-media__box:nth-child(#{$child}) {
-        border-top: solid $color-bg 6px ;
+    .main-social-media__box:nth-child(#{$child})::before {
+        content: "";
+        background: $color-bg;
+        position: absolute;
+        width: calc(95% + 10px);
+        height: calc(90% + 10px);
+        top: -3px;
+        z-index: -1;
+        border-radius: 8px;
     }
 }
