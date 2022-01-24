@@ -33,4 +33,20 @@
     font-weight: $font-weights-700;
     color: var(--text-color-primary);
     margin-top: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.social-numbers {
+    margin-left: 4px;
+}
+
+.social-numbers--positive {
+    color: green;
+    font-weight: $font-weights-700;
+}
+
+.social-numbers--negative {
+    color: red;
+    font-weight: $font-weights-700;
 }

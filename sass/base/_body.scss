@@ -3,11 +3,13 @@
 *   :root[data-theme="theme-dark"]
 */
 :root {
-    --background-color: hsl(0, 0%, 100%);;
+    --background-color: hsl(0, 0%, 100%);
     --background-color-top: hsl(225, 100%, 98%);
     --card-background: hsl(227, 47%, 96%);
     --text-color-primary: hsl(228, 12%, 44%);
     --text-color-sencondary: hsl(230, 17%, 14%);
+    --bg-theme-switcher :  linear-gradient(to left top, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --circle-color: hsl(225, 100%, 98%);
 }
 
 body.dark-theme {
@@ -15,7 +17,9 @@ body.dark-theme {
     --background-color-top: hsl(232, 19%, 15%);
     --card-background: hsl(228, 28%, 20%);
     --text-color-primary: hsl(228, 34%, 66%);
-    --text-color-sencondary: hsl(0, 0%, 100%);;
+    --text-color-sencondary: hsl(0, 0%, 100%);
+    --bg-theme-switcher :  linear-gradient(to left top, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --circle-color: hsl(232, 19%, 15%);
 }
 
 
@@ -24,4 +28,5 @@ body {
     height: 100vh;
     background-image: linear-gradient(var(--background-color-top) 30%, var(--background-color) 30%);
     background-repeat: no-repeat;
+    transition: all 2s ease;
 }

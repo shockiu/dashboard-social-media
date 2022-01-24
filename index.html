@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-6">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -11,7 +11,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(226, 46%, 44%); }
   </style>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -28,7 +28,10 @@
         </p>
       </div>
       <div class="theme-switcher">
-        Dark Mode
+        <p>
+          Dark Mode
+        </p>
+        <input type="checkbox" id="theme-switcher">
       </div>
     </div>
   
@@ -44,13 +47,16 @@
             <p class="main-social-media__user">@nathanf</p>
           </div>
           <div class="main-social-media__stats">
-            1987
+            1967
           </div>
           <div class="main-social-media__followers">
             Followers
           </div>
           <div class="main-social-media__stats-today">
-            12 Today
+            <img src="./images/icon-up.svg" alt="" height="6" width="10">
+            <span class="social-numbers social-numbers--positive ">
+              12 Today
+            </span>
           </div>
         </div> 
         <!-- END BOX SOCIAL MEDIA -->
@@ -70,7 +76,10 @@
             Followers
           </div>
           <div class="main-social-media__stats-today">
-            99 Today
+            <img src="./images/icon-up.svg" alt="" height="6" width="10">
+            <span class="social-numbers social-numbers--positive ">
+              99 Today
+            </span>
           </div>
         </div>
         <!-- END BOX SOCIAL MEDIA -->
@@ -79,7 +88,7 @@
         <div class="main-social-media__box instagram-after">
           <div class="user-icon-social">
             <img src="./images/icon-instagram.svg" alt="" height="20" width="20">
-            <p class="main-social-media__user">@realnathanf</p>
+            <span class="main-social-media__user">@realnathanf</p>
           </div>
           <div class="main-social-media__stats">
             11k
@@ -88,7 +97,10 @@
             Followers
           </div>
           <div class="main-social-media__stats-today">
-            1099 Today
+            <img src="./images/icon-up.svg" alt="" height="6" width="10">
+            <span class="social-numbers social-numbers--positive ">
+              1099 Today
+            </span>
           </div>
         </div>
         <!-- END BOX SOCIAL MEDIA -->
@@ -100,13 +112,16 @@
             <p class="main-social-media__user">Nathan F.</p>
           </div>
           <div class="main-social-media__stats">
-            8239
+            6239
           </div>
           <div class="main-social-media__followers">
             Subscribers
           </div>
           <div class="main-social-media__stats-today">
-            144 Today
+            <img src="./images/icon-down.svg" alt="" height="6" width="10">
+            <span class="social-numbers social-numbers--negative">
+              144 Today
+            </span>
           </div>
         </div>
         <!-- END BOX SOCIAL MEDIA -->
@@ -127,10 +142,13 @@
           </div>
           <div class="overview-stats__resume">
             <p class="overview-stats__today">
-              87
+              67
             </p>
             <p class="overview-percent__today">
-              3%
+              <img src="./images/icon-up.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--positive ">
+                3%
+              </span>
             </p>
           </div>
         </div>
@@ -143,10 +161,13 @@
           </div>
           <div class="overview-stats__resume">
             <p class="overview-stats__today">
-              52
+              62
             </p>
             <p class="overview-percent__today">
-              2%
+              <img src="./images/icon-down.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--negative ">
+                2%
+              </span>
             </p>
           </div>
         </div>
@@ -159,10 +180,13 @@
           </div>
           <div class="overview-stats__resume">
             <p class="overview-stats__today">
-              5462
+              6462
             </p>
             <p class="overview-percent__today">
-              2257%
+              <img src="./images/icon-up.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--positive">
+                2267%
+              </span>
             </p>
           </div>
         </div>
@@ -175,10 +199,13 @@
           </div>
           <div class="overview-stats__resume">
             <p class="overview-stats__today">
-              52k
+              62k
             </p>
             <p class="overview-percent__today">
-              1375%
+              <img src="./images/icon-up.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--positive">
+                1376%
+              </span>
             </p>
           </div> 
         </div>
@@ -194,7 +221,10 @@
               117
             </p>
             <p class="overview-percent__today">
-              303%
+              <img src="./images/icon-up.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--positive">
+                303%
+              </span>
             </p>
           </div>
         </div>
@@ -207,10 +237,13 @@
           </div>
           <div class="overview-stats__resume">
             <p class="overview-stats__today">
-              507
+              607
             </p>
             <p class="overview-percent__today">
-              553%
+              <img src="./images/icon-up.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--positive">
+                63%
+              </span>
             </p>
           </div>
         </div>
@@ -226,7 +259,10 @@
               107
             </p>
             <p class="overview-percent__today">
-              19%
+              <img src="./images/icon-down.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--negative">
+                19%
+              </span>
             </p>
           </div>
         </div>
@@ -242,7 +278,10 @@
               1407
             </p>
             <p class="overview-percent__today">
-              12%  
+              <img src="./images/icon-down.svg" alt="" height="6" width="10">
+              <span class="social-numbers social-numbers--negative">
+                12%  
+              </span>
             </p>
           </div>
         </div>
@@ -255,5 +294,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>  
   </footer>
+  <script src="./js/index.js"></script>
 </body>
 </html>
