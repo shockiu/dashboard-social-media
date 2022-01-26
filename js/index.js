@@ -7,3 +7,16 @@ checkbox.addEventListener('click', () => {
     }
     body.classList.remove('dark-theme');
 });
+
+
+const detectThemeBrowser = () => {
+    if(
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+    ) {
+        checkbox.checked = true;
+        body.classList.add('dark-theme');
+    }
+}
+
+detectThemeBrowser();

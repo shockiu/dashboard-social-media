@@ -2,11 +2,17 @@
     font-size: calc(14px * 2);
     color: var(--text-color-sencondary);
     margin-bottom: 6px;
+    @include break('lg-small') {
+        font-size: 22px;
+    }
 }
 
 .stats-dash {
     font-size: $font-size;
     color: var(--text-color-primary);
+    @include break('lg-small') {
+        font-size: 12px;
+    }
 }
 
 .overview-title {

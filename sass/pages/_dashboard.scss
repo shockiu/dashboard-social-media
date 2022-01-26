@@ -3,6 +3,13 @@
     justify-content: space-between;
     font-family: $font-family;
     font-weight: $font-weights-700;
+    @include break('x-large') {
+        margin-top: 6%;
+    }
+    @include break('small') {
+        margin-top: 12%;
+        flex-direction: column; 
+    }
 }
 .social-media {
     margin-top: 6%;
@@ -10,13 +17,52 @@
 
 .main-social-media {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     margin-bottom: 6%;
+    margin-left: -1.7%;
+    margin-right: -1.7%;
+    @include break('x-large') {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        row-gap: 20px;
+    }
+    @include break('small') {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
 }
 
 .overview-stats {
     margin-top: 5px;
     font-family: $font-family;
+    margin-left: -14px;
+    margin-right: -14px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    @include break('x-large') {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    @include break('small') {
+        grid-template-columns: 1fr;
+    }
 }
+
+
+.divider {
+    display: none;
+    @include break('small') {
+        display: block;
+        margin-top: 10%;
+    }
+    height: 1.5px;
+    background-color: var(--text-color-primary);
+}
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center;
+    font-family: $font-family;
+    font-weight: $font-weights-700;
+    color: var(--text-color-primary);
+    margin-bottom: 12px;
+}
+.attribution a { color: hsl(226, 46%, 44%); }

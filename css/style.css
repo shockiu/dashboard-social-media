@@ -14,7 +14,8 @@
 :root {
   --background-color: hsl(0, 0%, 100%);
   --background-color-top: hsl(225, 100%, 98%);
-  --card-background: hsl(227, 47%, 96%);
+  --card-background: hsl(228, 50%, 96%);
+  --card-background-hover: hsl(231, 19%, 86%);
   --text-color-primary: hsl(228, 12%, 44%);
   --text-color-sencondary: hsl(230, 17%, 14%);
   --bg-theme-switcher:  linear-gradient(to left top, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
@@ -24,13 +25,14 @@ body.dark-theme {
   --background-color: hsl(230, 17%, 14%);
   --background-color-top: hsl(232, 19%, 15%);
   --card-background: hsl(228, 28%, 20%);
+  --card-background-hover: hsl(233, 19%, 26%);
   --text-color-primary: hsl(228, 34%, 66%);
   --text-color-sencondary: hsl(0, 0%, 100%);
   --bg-theme-switcher:  linear-gradient(to left top, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --circle-color: hsl(232, 19%, 15%); }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(var(--background-color-top) 30%, var(--background-color) 30%);
   background-repeat: no-repeat;
   transition: all 2s ease; }
@@ -47,29 +49,80 @@ body {
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   font-weight: 700; }
+  @media (max-width: 1145px) {
+    .title-theme {
+      margin-top: 6%; } }
+  @media (max-width: 620px) {
+    .title-theme {
+      margin-top: 12%;
+      flex-direction: column; } }
 
 .social-media {
   margin-top: 6%; }
 
 .main-social-media {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin-bottom: 6%; }
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  margin-bottom: 6%;
+  margin-left: -1.7%;
+  margin-right: -1.7%; }
+  @media (max-width: 1145px) {
+    .main-social-media {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      row-gap: 20px; } }
+  @media (max-width: 620px) {
+    .main-social-media {
+      grid-template-columns: 1fr;
+      row-gap: 20px; } }
 
 .overview-stats {
   margin-top: 5px;
   font-family: "Inter", sans-serif;
+  margin-left: -14px;
+  margin-right: -14px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  grid-template-columns: repeat(4, minmax(240px, 1fr)); }
+  @media (max-width: 1145px) {
+    .overview-stats {
+      grid-template-columns: repeat(2, minmax(200px, 1fr)); } }
+  @media (max-width: 620px) {
+    .overview-stats {
+      grid-template-columns: 1fr; } }
+
+.divider {
+  display: none;
+  height: 1.5px;
+  background-color: var(--text-color-primary); }
+  @media (max-width: 620px) {
+    .divider {
+      display: block;
+      margin-top: 10%; } }
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--text-color-primary);
+  margin-bottom: 12px; }
+
+.attribution a {
+  color: #3d55a4; }
 
 .title-dash {
   font-size: calc(14px * 2);
   color: var(--text-color-sencondary);
   margin-bottom: 6px; }
+  @media (max-width: 570px) {
+    .title-dash {
+      font-size: 22px; } }
 
 .stats-dash {
   font-size: 14px;
   color: var(--text-color-primary); }
+  @media (max-width: 570px) {
+    .stats-dash {
+      font-size: 12px; } }
 
 .overview-title {
   font-family: "Inter", sans-serif;
@@ -84,6 +137,12 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media (max-width: 620px) {
+    .theme-switcher {
+      margin-top: 8%;
+      margin-bottom: 4%;
+      justify-content: space-between;
+      font-size: 12px; } }
 
 input[type="checkbox"] {
   position: relative;
@@ -101,9 +160,9 @@ input[type="checkbox"] {
   input[type="checkbox"]::before {
     position: absolute;
     content: "";
-    width: 20px;
-    height: 20px;
-    top: 2px;
+    width: 18px;
+    height: 18px;
+    top: 3.8px;
     left: 5px;
     border-radius: 20px;
     background-color: var(--circle-color);
@@ -122,9 +181,14 @@ input[type="checkbox"] {
   height: 200px;
   font-family: "Inter", sans-serif;
   background-color: var(--card-background);
-  border-radius: 8px;
+  border-radius: 6px;
   margin: 0 14px;
-  position: relative; }
+  position: relative;
+  padding: 6% 0;
+  transition: all .8s; }
+
+.main-social-media__box:hover {
+  background-color: var(--card-background-hover); }
 
 .main-social-media__user {
   font-weight: 400;
@@ -198,9 +262,14 @@ input[type="checkbox"] {
   height: 140px;
   font-family: "Inter", sans-serif;
   background-color: var(--card-background);
-  border-radius: 8px;
+  border-radius: 6px;
   margin: 6px 14px;
-  position: relative; }
+  position: relative;
+  padding: 2% 0;
+  transition: all .8s; }
+
+.overview-stats__box:hover {
+  background-color: var(--card-background-hover); }
 
 .overview-stats__resume {
   display: flex;

@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include break('small') {
+        margin-top: 8%;
+        margin-bottom: 4%;
+        justify-content: space-between; 
+        font-size: 12px;
+    }
 }
 
 
@@ -33,7 +39,7 @@ input[type="checkbox"] {
         border-radius: 20px;
         background-color: var(--circle-color);
         transform: scale(1.1);
-        box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         transition: left 300ms linear;
         
     }  
