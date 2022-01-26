@@ -12,7 +12,7 @@ checkbox.addEventListener('click', () => {
 const detectThemeBrowser = () => {
     if(
         window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: light)').matches
+        window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
         checkbox.checked = true;
         body.classList.add('dark-theme');
